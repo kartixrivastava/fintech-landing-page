@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: #F8FAFB;
+  color: #0F172A;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.logo-icon {
+  display: flex;
+  align-items: center;
+  color: #0F172A; /* Or specific brand color if needed */
+  font-size: 28px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.nav-list li {
+  font-weight: 500;
+  color: #64748B;
+  cursor: pointer;
+  transition: color 0.2s;
+  font-size: 16px;
+}
+
+.nav-list li:hover {
+  color: #0F172A;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn {
+  padding: 10px 24px;
+  border-radius: 8px; /* Slightly more rounded */
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+
+.login-btn {
+  background: white;
+  border: 1px solid #E2E8F0;
+  color: #0F172A;
+}
+
+.login-btn:hover {
+  background-color: #f1f5f9;
+}
+
+.signup-btn {
+  background-color: #1F8F9B; /* Teal */
+  color: white;
+  box-shadow: 0 4px 12px rgba(31, 143, 155, 0.2);
+}
+
+.signup-btn:hover {
+  background-color: #1a7a85;
+}
+
+
+/* HERO SECTION */
+.hero {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 60px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+/* LEFT SIDE - CONTENT */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-h1 {
+  font-size: 72px; /* Large and bold */
+  line-height: 1.1;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
+}
+
+.hero-subtext {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.hero-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.email-input {
+  padding: 16px 20px; /* Taller input */
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  font-size: 16px;
+  width: 320px;
+  outline: none;
+  background: white;
+  color: #0F172A;
+  transition: border-color 0.2s;
+}
+
+.email-input:focus {
+  border-color: #1F8F9B;
+}
+
+.get-started-btn {
+  background-color: #1F8F9B;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.get-started-btn:hover {
+  background-color: #1a7a85;
+}
+
+.btn-icon {
+  font-size: 14px;
+}
+
+.hero-logos {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  color: #0F172A;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+
+/* RIGHT SIDE - PAYMENT UI */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Align right */
+  position: relative;
+}
+
+.payment-ui {
+  position: relative;
+  /* Ensure there's space for the floating card */
+  padding-right: 40px; 
+  padding-top: 40px;
+}
+
+.invoice-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px;
+  width: 380px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.06);
+  z-index: 10;
+  position: relative;
+}
+
+/* User Info inside Invoice Card */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.user-avatar {
+  background-color: #1F8F9B;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px; /* Squircle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: #0F172A;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #94A3B8;
+}
+
+/* Invoice Details */
+.invoice-label {
+  font-size: 13px;
+  color: #94A3B8;
+  margin-bottom: 4px;
+}
+
+.invoice-amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 4px;
+  letter-spacing: -1px;
+}
+
+.invoice-date {
+  font-size: 14px;
+  color: #94A3B8;
+  margin-bottom: 24px;
+}
+
+/* Payment Methods */
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.method {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.method.active {
+  border-color: #1F8F9B;
+  background-color: #F0FDFA; /* Very light teal */
+  box-shadow: 0 0 0 1px #1F8F9B inset;
+}
+
+.method-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  color: #0F172A;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CBD5E1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-circle.selected {
+  border-color: #1F8F9B;
+}
+
+.radio-circle.selected::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #1F8F9B;
+  border-radius: 50%;
+}
+
+.pay-btn {
+  width: 100%;
+  background-color: #0F172A; /* Dark Navy */
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Floating Credit Card */
+.credit-card-float {
+  position: absolute;
+  top: 0;
+  right: 0; /* Align to the right edge of payment-ui container */
+  width: 240px;
+  height: 260px; /* Square-ish shape from screenshot */
+  background: linear-gradient(135deg, #2D9CAB 0%, #1F8F9B 100%);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  box-shadow: 0 20px 40px rgba(31, 143, 155, 0.3);
+  z-index: 20; /* On top of invoice card */
+  transform: translate(20px, -20px); /* Adjust overlap */
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-top span {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.card-number {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wireless-icon {
+  font-size: 24px;
+}
